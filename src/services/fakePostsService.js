@@ -482,3 +482,23 @@ export function getPosts() {
 export function getPost(id) {
   return posts.find((p) => p.id === id);
 }
+
+// *******************************************************//
+export function getFilteredPostsBasedOnTags(tags) {
+  if (tags.length === 0) {
+    return posts;
+  }
+  const result = posts.filter((post) => post.tagList.find((tag) => tags.includes(tag)));
+  return result;
+}
+
+export function getFilteredPosts(currentPage, pageSize, tags) {
+  const postsToBesliced = getFilteredPostsBasedOnTags(tags);
+  const start = (currentPage - 1) * pageSize;
+  const postsToBeDisplayed = postsToBesliced.slice(start, start + pageSize);
+  const returnedValue = {
+    posts: postsToBeDisplayed,
+    count: postsToBesliced.length,
+  };
+  return returnedValue;
+}

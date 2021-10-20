@@ -13,6 +13,7 @@ export const colors = {
   silver: '#c8c8c8',
   white: '#fff',
 };
+
 export const breakingPoints = {
   mobile: '480px',
   tablets: '768px',

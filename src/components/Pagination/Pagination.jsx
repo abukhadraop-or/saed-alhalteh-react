@@ -5,7 +5,7 @@ import { PaginationList, PaginationLink } from './pagination.styles';
 /**
  * Component that displays the pages number based on the number of available posts.
  *
- * @param {Array} posts        Array of objects, which contains the posts.
+ * @param {number} count        Array of objects, which contains the posts.
  * @param {Number} pageSize    Maximum number of posts that are allowed per page.
  * @param {function} onClick   functions to set the range of posts to be displayed based on the current page.
  * @param {Number} CurrentPage current page.
@@ -13,8 +13,8 @@ import { PaginationList, PaginationLink } from './pagination.styles';
  * @returns {JSX.Element} Pagination
  */
 
-function Pagination({ posts, pageSize, onClick, currentPage }) {
-  const itemCount = posts.length;
+function Pagination({ count, pageSize, onClick, currentPage }) {
+  const itemCount = count;
   let pagesCount = Math.floor(itemCount / pageSize) + 1;
   if (itemCount % pageSize === 0) pagesCount -= 1;
   if (pagesCount === 1) return null;
@@ -38,7 +38,6 @@ Pagination.propTypes = {
   pageSize: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
   currentPage: PropTypes.number.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  posts: PropTypes.array.isRequired,
+  count: PropTypes.number.isRequired,
 };
 export default Pagination;
