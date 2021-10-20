@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Fragment } from 'react/cjs/react.production.min';
 import { Container, Logo, LinksList, NavItem, MenuBlock, MenuIcon } from './nav-bar.styles';
 
 /**
@@ -34,7 +33,7 @@ function NavBar() {
   }
 
   return (
-    <Fragment>
+    <>
       <Container>
         <Logo>
           <Link to="/">{logo}</Link>
@@ -59,7 +58,7 @@ function NavBar() {
           ))}
         </MenuBlock>
       )}
-    </Fragment>
+    </>
   );
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import { Fragment } from 'react/cjs/react.production.min';
 import MetaInfo from 'components/MetaInfo/MetaInfo';
 import LikeComponent from 'components/Like/Like';
 import { Container, UserDataContainer, PostContent, ReadMore } from './global-feed-posts.styles';
@@ -32,7 +31,7 @@ function GlobalFeedPosts({ posts }) {
     );
 
   return posts.map((post) => (
-    <Fragment>
+    <>
       <Container>
         <UserDataContainer>
           <MetaInfo post={post} />
@@ -44,7 +43,7 @@ function GlobalFeedPosts({ posts }) {
         </PostContent>
         <ReadMore onClick={() => handleClick(post)}> Read more...</ReadMore>
       </Container>
-    </Fragment>
+    </>
   ));
 }
 

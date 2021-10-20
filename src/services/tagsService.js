@@ -1,7 +1,7 @@
-import { apiUrl } from '../config.json';
+import appConfig from 'config';
 import http from './httpService';
 
-const apiEndpoint = `${apiUrl}/tags`;
+const apiEndpoint = `${appConfig.apiUrl}/tags`;
 
 export default function getPosts() {
   return http.get(apiEndpoint);

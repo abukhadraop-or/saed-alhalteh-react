@@ -1,5 +1,4 @@
 import React from 'react';
-import { Fragment } from 'react/cjs/react.production.min';
 import Banner from 'components/Banner/Banner';
 import GlobalFeed from '../GlobalFeed/GlobalFeed';
 
@@ -10,10 +9,10 @@ import GlobalFeed from '../GlobalFeed/GlobalFeed';
  */
 function Conduit() {
   return (
-    <Fragment>
+    <>
       <Banner />
       <GlobalFeed />
-    </Fragment>
+    </>
   );
 }
 

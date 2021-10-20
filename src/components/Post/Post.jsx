@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom';
 import MetaInfo from 'components/MetaInfo/MetaInfo';
 import LikeComponent from 'components/Like/Like';
 // import { getPost } from 'services/fakePostsService';
-import { Fragment } from 'react/cjs/react.production.min';
 import { HeaderContainer, PostContentContainer, Container, CommentsContainer } from './post.styles';
 
 function Post() {
@@ -19,7 +18,7 @@ function Post() {
   // }, []);
 
   return (
-    <Fragment>
+    <>
       <HeaderContainer>
         <h1>{postToBeRendered.title}</h1>
         <Container>
@@ -31,7 +30,7 @@ function Post() {
       <CommentsContainer>
         Comments section will only be available for registered users ....
       </CommentsContainer>
-    </Fragment>
+    </>
   );
 }
 
