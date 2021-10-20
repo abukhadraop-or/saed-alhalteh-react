@@ -1,19 +1,20 @@
 import { ReactComponent as LikeLogo } from 'assets/Icons/likeLogoSolid.svg';
 import styled from 'styled-components';
+import { colors } from 'shared/styles';
 
 export const LikeBox = styled.div`
   align-self: center;
-  border: 2px solid #5cb85c;
+  border: 2px solid ${colors.fern};
   border-radius: 5px;
-  color: #5cb85c;
+  color: ${colors.fern};
   cursor: pointer;
   margin: 0 0 0 auto;
   padding: 5px 15px;
   &:hover {
-    background-color: #5cb85c;
-    color: #fff;
+    background-color: ${colors.fern};
+    color: ${colors.white};
     & svg {
-      fill: #fff;
+      fill: ${colors.white};
     }
   }
   & span {
@@ -21,7 +22,7 @@ export const LikeBox = styled.div`
   }
 `;
 export const Like = styled(LikeLogo)`
-  fill: #5cb85c;
+  fill: ${colors.fern};
   margin: 0 5px 0 0;
   vertical-align: middle;
 `;

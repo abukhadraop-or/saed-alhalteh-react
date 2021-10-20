@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { colors } from 'shared/styles';
 
 export const HeaderContainer = styled.div`
-  color: #fff;
-  background-color: #333333;
+  color: ${colors.white};
+  background-color: ${colors.mineShaft};
   padding: 15px 45px;
   & h1 {
     font-size: 2.8rem;
@@ -23,5 +24,5 @@ export const CommentsContainer = styled.div`
   padding: 25px 45px;
   font-size: 1.25rem;
   line-height: 1.5;
-  color: #868686;
+  color: ${colors.gray};
 `;

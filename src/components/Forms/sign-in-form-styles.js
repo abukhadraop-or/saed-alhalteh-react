@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { colors } from 'shared/styles';
 
 export const FormContainer = styled.div`
   text-align: center;
@@ -16,11 +17,11 @@ export const Title = styled.h1`
 `;
 
 export const RedirectLink = styled(Link)`
-  color: #5cb85c;
+  color: ${colors.fern};
   padding: 5px 0 25px;
   text-decoration: none;
   &:hover {
-    color: #347634;
+    color: ${colors.goblin};
     text-decoration: underline;
   }
 `;
@@ -29,15 +30,15 @@ export const InputBar = styled.input`
   padding: 1rem 2rem;
   width: 100%;
   margin: 25px 0;
-  border: 1px solid #acb9b4;
+  border: 1px solid ${colors.edward};
   border-radius: 5px;
   font-size: 1.125rem;
   max-width: 500px;
   box-sizing: border-box;
 `;
 export const SubmitButton = styled.button`
-  color: #fff;
-  background-color: #5cb85c;
+  color: ${colors.white};
+  background-color: ${colors.fern};
   font-size: 1.125rem;
   font-weight: 500;
   padding: 15px 25px;
@@ -45,7 +46,7 @@ export const SubmitButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   &:hover {
-    background-color: #347634;
+    background-color: ${colors.goblin};
   }
   margin: 0 0 0 auto;
 `;

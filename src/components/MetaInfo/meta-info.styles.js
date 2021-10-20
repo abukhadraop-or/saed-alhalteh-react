@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from 'shared/styles';
 
 export const MetaInfoContainer = styled.div`
   display: flex;
@@ -18,20 +19,20 @@ export const NameAndDateContainer = styled.div`
   & p:first-of-type {
     cursor: pointer;
     &:hover {
-      color: #337433;
+      color: ${colors.goblin};
       text-decoration: underline;
     }
   }
 `;
 
 export const Username = styled.p`
-  color: #5cb85c;
+  color: ${colors.fern};
   font-size: 0.875rem;
   margin: 0;
 `;
 
 export const PublishDate = styled.p`
-  color: rgb(92, 184, 92, 0.5);
+  color: ${colors.oFern};
   font-size: 0.75rem;
   margin: 0;
 `;

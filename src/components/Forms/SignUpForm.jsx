@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import Input from 'components/Forms/Input';
 import { FormContainer, Title, RedirectLink, SubmitButton } from './sign-in-form-styles';
-import Input from './Input';
 
 function SignUpForm() {
   const [userData, setUserData] = useState({ username: '', email: '', password: '' });

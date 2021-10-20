@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from 'components/Banner/Banner';
-import GlobalFeed from '../GlobalFeed/GlobalFeed';
+import GlobalFeed from 'components/GlobalFeed/GlobalFeed';
 
 /**
  * Component showing home page of the application.

@@ -1,21 +1,22 @@
 import styled from 'styled-components';
+import { colors, breakingPoints } from 'shared/styles';
 
 export const PaginationList = styled.ul`
   list-style: none;
   text-align: center;
   & :nth-child(${(props) => props.currentPage}) {
-    background-color: #5cb85c;
-    color: white;
+    background-color: ${colors.fern};
+    color: ${colors.white};
   }
-  @media (min-width: 830px) {
+  @media (min-width: ${breakingPoints.tablets}) {
     width: 75%;
   }
 `;
 
 export const PaginationLink = styled.li`
-  border: 1px solid #5cb85c;
+  border: 1px solid ${colors.fern};
   border-radius: 3px;
-  color: #5cb85c;
+  color: ${colors.fern};
   cursor: pointer;
   display: inline-block;
   margin: 0 5px 0 0;

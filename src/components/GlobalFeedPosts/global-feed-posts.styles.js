@@ -1,22 +1,23 @@
 import styled from 'styled-components';
+import { colors, breakingPoints } from 'shared/styles';
 
 export const Container = styled.div`
   margin: 0 0 25px 0;
   max-width: 550px;
   padding: 0 10px;
   width: 100%;
-  @media (min-width: 550px) {
+  @media (min-width: ${breakingPoints.mobile}) {
     margin: 0px auto;
   }
-  @media (min-width: 830px) {
+  @media (min-width: ${breakingPoints.tablets}) {
     flex-basis: 75%;
     margin: 0 0 0 40px;
     width: 90%;
   }
-  @media (min-width: 1000px) {
+  @media (min-width: ${breakingPoints.smallScreen}) {
     max-width: 900px;
   }
-  @media (min-width: 1400px) {
+  @media (min-width: ${breakingPoints.largeScreen}) {
     margin: 0px 0 25px 100px;
     width: 1000px;
   }
@@ -26,7 +27,7 @@ export const UserDataContainer = styled.div`
   display: flex;
   padding: 0 20px 0 0;
   & :nth-child(2) {
-    @media (min-width: 830px) {
+    @media (min-width: ${breakingPoints.tablets}) {
       margin: 0 15px 0 auto;
     }
     & span {
@@ -44,7 +45,7 @@ export const PostContent = styled.div`
     margin-bottom: 3px;
   }
   & p {
-    color: #999;
+    color: ${colors.dustyGrey};
     font-size: 1rem;
     font-weight: 300;
     margin-bottom: 15px;
@@ -52,11 +53,11 @@ export const PostContent = styled.div`
 `;
 
 export const ReadMore = styled.p`
-  color: #999;
+  color: ${colors.dustyGrey};
   cursor: pointer;
   font-size: 0.75rem;
   padding: 15px 0 15px;
-  &: hover {
+  &:hover {
     text-decoration: underline;
   }
 `;
