@@ -9,7 +9,6 @@ import Post from 'components/Post/Post';
 import Footer from 'components/Footer/Footer';
 import UserProfile from 'components/UserProfile/UserProfile';
 import ContentContainer from 'app.style';
-import './App.css';
 
 function App() {
   return (
