@@ -1,6 +1,6 @@
 import { ReactComponent as LikeLogo } from 'assets/Icons/likeLogoSolid.svg';
 import styled from 'styled-components';
-import { colors } from 'shared/styles';
+import { colors } from 'styles/colors-and-breaking-points';
 
 export const LikeBox = styled.div`
   align-self: center;

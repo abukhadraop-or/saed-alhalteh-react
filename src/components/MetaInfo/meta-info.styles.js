@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from 'shared/styles';
+import { colors } from 'styles/colors-and-breaking-points';
 
 export const MetaInfoContainer = styled.div`
   display: flex;

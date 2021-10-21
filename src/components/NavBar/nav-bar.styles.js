@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ReactComponent as HamburgerMenu } from 'assets/Icons/hamburgerMenu.svg';
-import { colors, breakingPoints } from 'shared/styles';
+import { colors, breakingPoints } from 'styles/colors-and-breaking-points';
 
 export const Container = styled.div`
   display: flex;

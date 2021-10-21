@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, breakingPoints } from 'shared/styles';
+import { colors, breakingPoints } from 'styles/colors-and-breaking-points';
 
 export const NavLink = styled.ul`
   border-bottom: 0.125rem solid ${colors.concrete};

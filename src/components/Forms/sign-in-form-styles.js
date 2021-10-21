@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { colors } from 'shared/styles';
+import { colors } from 'styles/colors-and-breaking-points';
 
 export const FormContainer = styled.div`
   text-align: center;

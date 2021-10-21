@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import LikeComponent from 'components/Like/Like';
-import { colors, breakingPoints } from 'shared/styles';
+import { colors, breakingPoints } from 'styles/colors-and-breaking-points';
 
 export const Container = styled.div`
   margin: 0 0 1.5625rem 0;
