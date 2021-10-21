@@ -6,10 +6,24 @@ import SignInForm from 'components/Forms/SignInForm';
 import Conduit from 'components/ConduitHomePage/Conduit';
 import Post from 'components/Post/Post';
 import UserProfile from 'components/UserProfile/UserProfile';
+import { createGlobalStyle } from 'styled-components';
 
+const GlobalStyle = createGlobalStyle`
+  body {
+    font-family:'Titillium Web', sans-serif;
+    margin: 0;
+  }
+`;
+
+/**
+ * Component shows the Nav-bar and Routes for our applications.
+ *
+ * @return {JSX.Element} App component.
+ */
 function App() {
   return (
     <>
+      <GlobalStyle />
       <NavBar />
       <Switch>
         <Route path="/user" component={UserProfile} />

@@ -22,8 +22,8 @@ function Post() {
       <HeaderContainer>
         <h1>{postToBeRendered.title}</h1>
         <Container>
-          <MetaInfo post={postToBeRendered} />
-          <LikeComponent post={postToBeRendered} />
+          <MetaInfo author={postToBeRendered.author} />
+          <LikeComponent count={postToBeRendered.favoritesCount} />
         </Container>
       </HeaderContainer>
       <PostContentContainer>{postToBeRendered.body}</PostContentContainer>

@@ -9,15 +9,17 @@ export const ProfileImg = styled.img`
   align-self: center;
   border-radius: 50%;
   cursor: pointer;
-  height: 40px;
-  width: 40px;
+  height: 2.5rem;
+  width: 2.5rem;
 `;
 
 export const NameAndDateContainer = styled.div`
   align-self: center;
-  padding: 0 0 0 5px;
+  padding: 0 0 0 0.3125rem;
+
   & p:first-of-type {
     cursor: pointer;
+
     &:hover {
       color: ${colors.goblin};
       text-decoration: underline;

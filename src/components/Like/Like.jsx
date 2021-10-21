@@ -5,20 +5,22 @@ import { LikeBox, Like } from './like.styles';
 /**
  * Component showing number of likes for this post.
  *
+ * @param {Object} props The props object.
+ * @param {Number} props.count Number of likes on the current item.
  *
- * @returns  {JSX.Element}.Like box.
+ * @return {JSX.Element} Like component.
  */
-function LikeComponent({ post }) {
+function LikeComponent({ count }) {
   return (
     <LikeBox>
       <Like />
-      <span>{post.favoritesCount}</span>
+      <span>{count}</span>
     </LikeBox>
   );
 }
+
 LikeComponent.propTypes = {
-  post: PropTypes.shape({
-    favoritesCount: PropTypes.number.isRequired,
-  }).isRequired,
+  count: PropTypes.number.isRequired,
 };
+
 export default LikeComponent;

@@ -9,6 +9,7 @@ export const colors = {
   gray: '#868686',
   mineShaft: '#333333',
   oBlack: 'rgba(0,0,0,0.75)',
+  o3Black: 'rgba(0,0,0,0.3)',
   oFern: 'rgba(92,184,92,0.5)',
   silver: '#c8c8c8',
   white: '#fff',

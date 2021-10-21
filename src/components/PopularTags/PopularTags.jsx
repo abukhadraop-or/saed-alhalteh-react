@@ -1,64 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import getPopularTags from 'services/fakeTagLists';
+import getPopularTags from 'services/fake-tag-lists';
 import { TagsContainer, Title, TagsBox, Tag } from './popular-tags.styles';
 
 /**
- * Component showing popular tags.
- * @param {func} onClick function to handle click events on tags;
- * @returns  {JSX.Element}.Popular tags section that contains tags that can be used to filter the posts.
+ * Popular tags section that contains the tags that can be used to filter the posts.
+ *
+ * @param {Object} props The props object.
+ * @param {func} props.onClick Function to handle click events on tags.
+ * @param {String[]} props.selectedTags The selected tags.
+ *
+ * @return {JSX.Element} Popular tags component .
  */
-
-function PopularTags({ onClick }) {
+function PopularTags({ onClick, selectedTags }) {
   const [popularTags, setPopularTags] = useState([]);
 
+  /**
+   * Get popular tags from API.
+   */
   useEffect(() => {
-    /**
-     * get popular tags from API
-     */
-    function callGetPopularTags() {
-      const result = getPopularTags();
-      setPopularTags(result.tags);
-    }
-    callGetPopularTags();
+    const result = getPopularTags();
+    setPopularTags(result.tags);
   }, []);
-
-  /**
-   * toggles the style of the clicked tag and calls the OnClick function that is
-   *  responsible for filtering the posts based on the selected tag.
-   *
-   * @param {Object} e onClick event
-   * @param {string} tag the tag that is clicked
-   */
-  function handleTagClick(e, tag) {
-    e.target.classList.toggle('selected');
-    onClick(tag);
-  }
-
-  /**
-   *  display available tags on the popular tags section.
-   *
-   *  @returns  {JSX.Element}.the tags that are available.
-   */
-  function generateTags() {
-    if (popularTags.length === 0) {
-      return <b> No Tags are available yet... </b>;
-    }
-    return popularTags.map((tag) => (
-      <Tag key={tag} onClick={(e) => handleTagClick(e, tag)} status={false}>
-        {tag}
-      </Tag>
-    ));
-  }
 
   return (
     <TagsContainer>
       <Title> Popular Tags</Title>
-      <TagsBox>{generateTags()}</TagsBox>
+      <TagsBox>
+        {popularTags.length === 0 ? (
+          <b> No Tags are available yet... </b>
+        ) : (
+          popularTags.map((tag) => (
+            <Tag key={tag} onClick={() => onClick(tag)} isClicked={selectedTags.includes(tag)}>
+              {tag}
+            </Tag>
+          ))
+        )}
+      </TagsBox>
     </TagsContainer>
   );
 }
 PopularTags.propTypes = {
   onClick: PropTypes.func.isRequired,
+  selectedTags: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default PopularTags;

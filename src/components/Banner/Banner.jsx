@@ -2,9 +2,9 @@ import React from 'react';
 import { BannerContainer, BannerTitle, BannerDescription } from './banner.styles';
 
 /**
- * Component showing the Banner of the Application.
+ * Component shows the Banner of the Application.
  *
- * @returns JSX element that forms the banner.
+ * @return {JSX.Element} Banner component.
  */
 function Banner() {
   return (

@@ -5,35 +5,34 @@ import { PaginationList, PaginationLink } from './pagination.styles';
 /**
  * Component that displays the pages number based on the number of available posts.
  *
- * @param {number} count        Array of objects, which contains the posts.
- * @param {Number} pageSize    Maximum number of posts that are allowed per page.
- * @param {function} onClick   functions to set the range of posts to be displayed based on the current page.
- * @param {Number} CurrentPage current page.
+ * @param {Object} props The props object.
+ * @param {number} props.count Array of objects, which contains the posts.
+ * @param {Number} props.pageSize Maximum number of posts that are allowed per page.
+ * @param {function} props.onClick Functions to set the current page.
+ * @param {Number} props.currentPage The current page.
  *
- * @returns {JSX.Element} Pagination
+ * @return {JSX.Element} Pagination component.
  */
-
 function Pagination({ count, pageSize, onClick, currentPage }) {
-  const itemCount = count;
-  let pagesCount = Math.floor(itemCount / pageSize) + 1;
-  if (itemCount % pageSize === 0) pagesCount -= 1;
-  if (pagesCount === 1) return null;
+  let pagesCount = Math.floor(count / pageSize) + 1;
+  pagesCount = count % pageSize === 0 ? pagesCount - 1 : pagesCount;
+
   const pagesArray = [];
   for (let i = 1; i <= pagesCount; i += 1) {
     pagesArray.push(i);
   }
-  return (
-    <div>
-      <PaginationList currentPage={currentPage}>
-        {pagesArray.map((page) => (
-          <PaginationLink key={page} onClick={() => onClick(page)}>
-            {page}
-          </PaginationLink>
-        ))}
-      </PaginationList>
-    </div>
+
+  return pagesCount === 1 ? null : (
+    <PaginationList currentPage={currentPage}>
+      {pagesArray.map((page) => (
+        <PaginationLink key={page} onClick={() => onClick(page)}>
+          {page}
+        </PaginationLink>
+      ))}
+    </PaginationList>
   );
 }
+
 Pagination.propTypes = {
   pageSize: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,

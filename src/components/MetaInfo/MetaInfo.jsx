@@ -10,43 +10,48 @@ import {
 } from './meta-info.styles';
 
 /**
- * Component showing Meta Info about the post.
+ * Component that shows the post's author username and image, and the date when the posts was created.
  *
- * @returns  {JSX.Element}. Elements that includes some info about the post(author username, image, and the date when the posts was created).
+ * @param {Object} props The props object.
+ * @param {Object} props.author Object contains details about the post's author.
+ * @param {String} props.createdAt The date when the post created.
+ *
+ * @return {JSX.Element} MetaInfo component.
  */
-function MetaInfo({ post }) {
+function MetaInfo({ author, createdAt }) {
   const history = useHistory();
-  const date = Date.parse(post.createdAt);
+  const date = Date.parse(createdAt);
   const dateObj = new Date(date);
   const printDate = dateObj.toDateString();
+
   /**
-   * takes the user to a different page that displays the post author's profile.
+   * Takes the user to a different page that displays the post's author profile.
    *
-   * @param {object} post post object that contains the details of this post
+   * @param {object} post Post object that contains the details of this post.
    */
-  function handelClick() {
-    history.push({ pathname: `/user`, state: { detail: post } });
-  }
+  const handelClick = () => {
+    history.push({ pathname: `/user`, state: { detail: author } });
+  };
 
   return (
-    <div>
+    <>
       <MetaInfoContainer>
-        <ProfileImg onClick={() => handelClick(post)} src={post.author.image} alt="profile" />
+        <ProfileImg onClick={() => handelClick(author)} src={author.image} alt="profile" />
         <NameAndDateContainer>
-          <Username onClick={() => handelClick(post)}>{post.author.username}</Username>
+          <Username onClick={() => handelClick(author)}>{author.username}</Username>
           <PublishDate>{printDate}</PublishDate>
         </NameAndDateContainer>
       </MetaInfoContainer>
-    </div>
+    </>
   );
 }
+
 MetaInfo.propTypes = {
-  post: PropTypes.shape({
-    author: PropTypes.shape({
-      username: PropTypes.string.isRequired,
-      image: PropTypes.string.isRequired,
-    }),
-    createdAt: PropTypes.string,
+  author: PropTypes.shape({
+    username: PropTypes.string,
+    image: PropTypes.string,
   }).isRequired,
+  createdAt: PropTypes.string.isRequired,
 };
+
 export default MetaInfo;

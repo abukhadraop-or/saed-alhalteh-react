@@ -4,7 +4,7 @@ import ProfileImage from './user-profile.style';
 
 function UserProfile() {
   const history = useHistory();
-  const userInfo = history.location.state.detail.author;
+  const userInfo = history.location.state.detail;
   return (
     <div>
       <h1>

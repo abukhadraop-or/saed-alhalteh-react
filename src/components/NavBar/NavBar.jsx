@@ -3,34 +3,42 @@ import { Link } from 'react-router-dom';
 import { Container, Logo, LinksList, NavItem, MenuBlock, MenuIcon } from './nav-bar.styles';
 
 /**
+ * {String} The logo to be shown in the Nav-bar.
+ */
+const logo = 'Conduit';
+
+/**
+ * {Object[]} that contains the Links title and url to be shown in the Nav-bar.
+ */
+const items = [
+  {
+    label: 'Home',
+    to: '/',
+  },
+  {
+    label: 'Sign In',
+    to: '/signIn',
+  },
+  {
+    label: 'Sign Up',
+    to: '/signUp',
+  },
+];
+
+/**
  * Component showing the main navigation bar of the application.
  *
- * @returns JSX element that forms the navigation bar.
+ * @return {JSX.Element} Navigation bar component.
  */
 function NavBar() {
-  const [logo] = useState('Conduit');
-  const [items] = useState([
-    {
-      label: 'Home',
-      to: '/',
-    },
-    {
-      label: 'Sign In',
-      to: '/signIn',
-    },
-    {
-      label: 'Sign Up',
-      to: '/signUp',
-    },
-  ]);
-  const [menuStatus, setMenuStatus] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   /**
-   * revert the status of the menu.
+   * Revert the status of the menu.
    */
-  function handleMenuClick() {
-    setMenuStatus(!menuStatus);
-  }
+  const handleMenuClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
@@ -47,7 +55,7 @@ function NavBar() {
         </LinksList>
         <MenuIcon onClick={() => handleMenuClick()} />
       </Container>
-      {menuStatus && (
+      {isOpen && (
         <MenuBlock>
           {items.map((item) => (
             <NavItem>

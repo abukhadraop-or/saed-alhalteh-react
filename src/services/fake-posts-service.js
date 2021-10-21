@@ -475,30 +475,40 @@ const posts = [
   },
 ];
 
-export function getPosts() {
-  return posts;
-}
+/**
+ * Filter posts based on the selected tags.
+ *
+ * @param {Array} tags Array that contains all the tags that are selected.
+ *
+ * @return {Object[]} Array of objects that contains posts details.
+ */
+const getFilteredPostsBasedOnTags = (tags) => {
+  return tags.length === 0
+    ? posts
+    : posts.filter((post) => post.tagList.find((tag) => tags.includes(tag)));
+};
 
-export function getPost(id) {
-  return posts.find((p) => p.id === id);
-}
-
-// *******************************************************//
-export function getFilteredPostsBasedOnTags(tags) {
-  if (tags.length === 0) {
-    return posts;
-  }
-  const result = posts.filter((post) => post.tagList.find((tag) => tags.includes(tag)));
-  return result;
-}
-
-export function getFilteredPosts(currentPage, pageSize, tags) {
+/**
+ * Slice Filtered posts based on the current page and page size.
+ *
+ * @param {Number} currentPage Number of the selected page.
+ * @param {Number} pageSize Maximum number of posts per page.
+ * @param {Array} tags  Array of selected tags.
+ *
+ * @return {Object} Object that contains the filtered posts and the count of the total.
+ */
+const getFilteredPosts = (currentPage, pageSize, tags) => {
   const postsToBesliced = getFilteredPostsBasedOnTags(tags);
   const start = (currentPage - 1) * pageSize;
   const postsToBeDisplayed = postsToBesliced.slice(start, start + pageSize);
-  const returnedValue = {
+  const filteredPosts = {
     posts: postsToBeDisplayed,
     count: postsToBesliced.length,
   };
-  return returnedValue;
-}
+  return filteredPosts;
+};
+
+export default {
+  getFilteredPostsBasedOnTags,
+  getFilteredPosts,
+};
