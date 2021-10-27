@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import { colors } from 'styles/colors-and-breaking-points';
+import colors from 'styles/colors';
 
 export const PaginationList = styled.ul`
   list-style: none;
+  padding: 0;
   text-align: center;
 
   & li:nth-child(${(props) => props.currentPage}) {
     & button {
-      background-color: ${colors.fern};
+      background-color: ${colors.green};
       color: ${colors.white};
     }
   }
@@ -19,9 +20,9 @@ export const PaginationItem = styled.li`
 
 export const PaginationLink = styled.button`
   background-color: transparent;
-  border: 0.0625rem solid ${colors.fern};
+  border: 0.0625rem solid ${colors.green};
   border-radius: 0.1875rem;
-  color: ${colors.fern};
+  color: ${colors.green};
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;

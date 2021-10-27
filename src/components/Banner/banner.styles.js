@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { colors } from 'styles/colors-and-breaking-points';
+import colors from 'styles/colors';
 
 export const BannerContainer = styled.div`
-  background-color: ${colors.fern};
-  box-shadow: inset 0 0.5rem 0.5rem -0.5rem ${colors.o3Black},
-    inset 0 -0.5rem 0.5rem -0.5rem ${colors.o3Black};
+  background-color: ${colors.green};
+  box-shadow: inset 0 0.5rem 0.5rem -0.5rem ${colors.transparentBlack},
+    inset 0 -0.5rem 0.5rem -0.5rem ${colors.transparentBlack};
   color: ${colors.white};
   padding: 1.55rem;
   text-align: center;

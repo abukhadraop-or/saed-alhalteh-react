@@ -1,6 +1,7 @@
 import { ReactComponent as HamburgerMenu } from 'assets/icons/hamburger-menu.svg';
 import styled from 'styled-components';
-import { breakingPoints, colors } from 'styles/colors-and-breaking-points';
+import breakingPoints from 'styles/breaking-points';
+import colors from 'styles/colors';
 
 export const Container = styled.div`
   display: flex;
@@ -20,11 +21,11 @@ export const Container = styled.div`
 
 export const Logo = styled.div`
   & a {
-    color: ${colors.fern};
+    color: ${colors.green};
     font: 600 1.5rem 'Titillium Web', sans-serif;
 
     &:hover {
-      color: ${colors.fern};
+      color: ${colors.green};
     }
   }
 `;
@@ -56,11 +57,11 @@ export const MenuButton = styled.button`
 `;
 
 export const MenuIcon = styled(HamburgerMenu)`
-  fill: ${colors.fern};
+  fill: ${colors.green};
 `;
 
 export const MenuBlock = styled.div`
-  background-color: ${colors.oBlack};
+  background-color: ${colors.partiallyDarkBlack};
   border: 0.0625rem solid ${colors.black};
   border-radius: 0.9375rem;
   position: absolute;

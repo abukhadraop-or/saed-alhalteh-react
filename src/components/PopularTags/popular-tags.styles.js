@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { breakingPoints, colors } from 'styles/colors-and-breaking-points';
+import breakingPoints from 'styles/breaking-points';
+import colors from 'styles/colors';
 
 export const TagsContainer = styled.div`
   background-color: ${colors.concrete};
@@ -28,7 +29,7 @@ export const TagsBox = styled.p`
 `;
 
 export const Tag = styled.button`
-  background-color: ${(props) => (props.isClicked ? colors.oBlack : colors.silver)};
+  background-color: ${(props) => (props.isClicked ? colors.partiallyDarkBlack : colors.silver)};
   border: none;
   border-radius: 0.9375rem;
   color: ${(props) => (props.isClicked ? colors.white : colors.black)};

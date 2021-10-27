@@ -1,7 +1,8 @@
 import LikeComponent from 'components/Like/Like';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { breakingPoints, colors } from 'styles/colors-and-breaking-points';
+import breakingPoints from 'styles/breaking-points';
+import colors from 'styles/colors';
 
 export const Container = styled.div`
   padding: 0 0.625rem;

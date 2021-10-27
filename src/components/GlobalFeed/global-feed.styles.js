@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { breakingPoints, colors } from 'styles/colors-and-breaking-points';
+import breakingPoints from 'styles/breaking-points';
+import colors from 'styles/colors';
 
 export const NavItemsContainer = styled.ul`
   border-bottom: 0.125rem solid ${colors.concrete};
@@ -28,9 +29,9 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled(Link)`
-  border-bottom: 0.125rem solid ${colors.fern};
+  border-bottom: 0.125rem solid ${colors.green};
   bottom: -0.125rem;
-  color: ${colors.fern};
+  color: ${colors.green};
   display: inline-block;
   margin: 0;
   padding: 0.5rem 1rem;

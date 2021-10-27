@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { colors } from 'styles/colors-and-breaking-points';
+import colors from 'styles/colors';
 
 export const MetaInfoContainer = styled.div`
   display: flex;
@@ -20,17 +20,17 @@ export const NameAndDateContainer = styled.div`
 `;
 
 export const Username = styled(Link)`
-  color: ${colors.fern};
+  color: ${colors.green};
   font-size: 0.875rem;
   text-decoration: none;
   &:hover {
-    color: ${colors.goblin};
+    color: ${colors.darkGreen};
     text-decoration: underline;
   }
 `;
 
 export const PublishDate = styled.div`
-  color: ${colors.oFern};
+  color: ${colors.transparentGreen};
   font-size: 0.75rem;
   margin: 0;
 `;

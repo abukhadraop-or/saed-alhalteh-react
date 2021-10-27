@@ -6,4 +6,5 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 `;
+
 export default GlobalStyle;
