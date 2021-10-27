@@ -1,4 +1,4 @@
-import { ReactComponent as LikeLogo } from 'assets/Icons/likeLogoSolid.svg';
+import { ReactComponent as LikeLogo } from 'assets/icons/like-logo.svg';
 import styled from 'styled-components';
 import { colors } from 'styles/colors-and-breaking-points';
 

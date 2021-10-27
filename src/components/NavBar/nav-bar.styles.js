@@ -1,4 +1,4 @@
-import { ReactComponent as HamburgerMenu } from 'assets/Icons/hamburgerMenu.svg';
+import { ReactComponent as HamburgerMenu } from 'assets/icons/hamburger-menu.svg';
 import styled from 'styled-components';
 import { breakingPoints, colors } from 'styles/colors-and-breaking-points';
 
