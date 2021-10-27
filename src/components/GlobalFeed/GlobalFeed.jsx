@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import PopularTags from 'components/PopularTags/PopularTags';
 import GlobalFeedPosts from 'components/GlobalFeedPosts/GlobalFeedPosts';
 import Pagination from 'components/Pagination/Pagination';
+import PopularTags from 'components/PopularTags/PopularTags';
+import React, { useEffect, useState } from 'react';
 import fakeService from 'services/fake-posts-service';
 import {
-  NavItemsContainer,
   NavItem,
+  NavItemsContainer,
   NavLink,
-  TagsAndPostsContainer,
   PostsDiv,
+  TagsAndPostsContainer,
 } from './global-feed.styles';
 
 /**

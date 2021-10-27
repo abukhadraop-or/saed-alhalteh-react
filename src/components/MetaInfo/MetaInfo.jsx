@@ -1,12 +1,12 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import {
   MetaInfoContainer,
-  ProfileImg,
-  Username,
-  PublishDate,
   NameAndDateContainer,
+  ProfileImg,
+  PublishDate,
+  Username,
 } from './meta-info.styles';
 
 /**

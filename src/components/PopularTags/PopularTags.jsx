@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import getPopularTags from 'services/fake-tag-lists';
-import { TagsContainer, Title, TagsBox, Tag } from './popular-tags.styles';
+import { Tag, TagsBox, TagsContainer, Title } from './popular-tags.styles';
 
 /**
  * Popular tags section that contains the tags that can be used to filter the posts.

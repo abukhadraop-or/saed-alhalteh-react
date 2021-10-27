@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { LikeBox, Like } from './like.styles';
+import React from 'react';
+import { Like, LikeBox } from './like.styles';
 
 /**
  * Component showing number of likes for this post.

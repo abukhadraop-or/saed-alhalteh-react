@@ -1,5 +1,5 @@
 import React from 'react';
-import { BannerContainer, BannerTitle, BannerDescription } from './banner.styles';
+import { BannerContainer, BannerDescription, BannerTitle } from './banner.styles';
 
 /**
  * Component shows the Banner of the Application.

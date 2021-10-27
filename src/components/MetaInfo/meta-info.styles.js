@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { colors } from 'styles/colors-and-breaking-points';
 
 export const MetaInfoContainer = styled.div`
