@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Logo, LinksList, NavItem, MenuBlock, MenuIcon } from './nav-bar.styles';
+import {
+  Container,
+  LinksList,
+  Logo,
+  MenuBlock,
+  MenuButton,
+  MenuIcon,
+  NavItem,
+} from './nav-bar.styles';
 
 /**
  * {String} The logo to be shown in the Nav-bar.
@@ -53,7 +61,9 @@ function NavBar() {
             </NavItem>
           ))}
         </LinksList>
-        <MenuIcon onClick={() => handleMenuClick()} />
+        <MenuButton onClick={() => handleMenuClick()}>
+          <MenuIcon />
+        </MenuButton>
       </Container>
       {isOpen && (
         <MenuBlock>

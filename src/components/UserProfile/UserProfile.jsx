@@ -1,10 +1,10 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import ProfileImage from './user-profile.style';
 
 function UserProfile() {
-  const history = useHistory();
-  const userInfo = history.location.state.detail;
+  const location = useLocation();
+  const userInfo = location.state.author;
   return (
     <div>
       <h1>

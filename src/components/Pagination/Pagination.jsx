@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { PaginationList, PaginationLink } from './pagination.styles';
+import React from 'react';
+import { PaginationItem, PaginationLink, PaginationList } from './pagination.styles';
 
 /**
  * Component that displays the pages number based on the number of available posts.
@@ -25,9 +25,11 @@ function Pagination({ count, pageSize, onClick, currentPage }) {
   return pagesCount === 1 ? null : (
     <PaginationList currentPage={currentPage}>
       {pagesArray.map((page) => (
-        <PaginationLink key={page} onClick={() => onClick(page)}>
-          {page}
-        </PaginationLink>
+        <PaginationItem>
+          <PaginationLink key={page} onClick={() => onClick(page)}>
+            {page}
+          </PaginationLink>
+        </PaginationItem>
       ))}
     </PaginationList>
   );

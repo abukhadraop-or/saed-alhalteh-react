@@ -3,7 +3,13 @@ import PopularTags from 'components/PopularTags/PopularTags';
 import GlobalFeedPosts from 'components/GlobalFeedPosts/GlobalFeedPosts';
 import Pagination from 'components/Pagination/Pagination';
 import fakeService from 'services/fake-posts-service';
-import { NavLink, NavItem, TagsAndPostsContainer, PostsDiv } from './global-feed.styles';
+import {
+  NavItemsContainer,
+  NavItem,
+  NavLink,
+  TagsAndPostsContainer,
+  PostsDiv,
+} from './global-feed.styles';
 
 /**
  * {Number} Maximum number of posts per page.
@@ -59,9 +65,11 @@ function GlobalFeed() {
 
   return (
     <>
-      <NavLink>
-        <NavItem> Global Feed</NavItem>
-      </NavLink>
+      <NavItemsContainer>
+        <NavItem>
+          <NavLink to="/"> Global Feed</NavLink>
+        </NavItem>
+      </NavItemsContainer>
       <TagsAndPostsContainer>
         <PopularTags onClick={(tag) => handleTagClick(tag)} selectedTags={selectedTags} />
         <PostsDiv>

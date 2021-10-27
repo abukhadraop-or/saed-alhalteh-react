@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useHistory } from 'react-router-dom';
 import MetaInfo from 'components/MetaInfo/MetaInfo';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {
   Container,
-  UserDataContainer,
   Like,
   PostContent,
-  ReadMore,
+  ReadMoreDiv,
+  ReadMoreLink,
+  UserDataContainer,
 } from './global-feed-posts.styles';
 
 /**
@@ -19,16 +19,6 @@ import {
  * @return {JSX.Element} Global feed Posts.
  */
 function GlobalFeedPosts({ posts }) {
-  const history = useHistory();
-  /**
-   * Takes the user to a different page that displays the post in more details.
-   *
-   * @param {Object} post The Post object that contains the details of this post.
-   */
-  const handleClick = (post) => {
-    history.push({ pathname: `/posts`, state: { detail: post } });
-  };
-
   return posts.length === 0 ? (
     <Container>
       <p> No articles are here... yet. </p>
@@ -41,11 +31,15 @@ function GlobalFeedPosts({ posts }) {
             <MetaInfo author={post.author} createdAt={post.createdAt} />
             <Like count={post.favoritesCount} />
           </UserDataContainer>
-          <PostContent onClick={() => handleClick(post)}>
-            <h1>{post.title}</h1>
+          <PostContent to={{ pathname: '/posts', state: { detail: post } }}>
+            <h2>{post.title}</h2>
             <p>{post.description}</p>
           </PostContent>
-          <ReadMore onClick={() => handleClick(post)}> Read more...</ReadMore>
+          <ReadMoreDiv>
+            <ReadMoreLink to={{ pathname: '/posts', state: { detail: post } }}>
+              Read more...
+            </ReadMoreLink>
+          </ReadMoreDiv>
         </Container>
       </>
     ))

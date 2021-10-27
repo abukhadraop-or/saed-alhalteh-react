@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   MetaInfoContainer,
@@ -19,26 +19,18 @@ import {
  * @return {JSX.Element} MetaInfo component.
  */
 function MetaInfo({ author, createdAt }) {
-  const history = useHistory();
   const date = Date.parse(createdAt);
   const dateObj = new Date(date);
   const printDate = dateObj.toDateString();
 
-  /**
-   * Takes the user to a different page that displays the post's author profile.
-   *
-   * @param {object} post Post object that contains the details of this post.
-   */
-  const handelClick = () => {
-    history.push({ pathname: `/user`, state: { detail: author } });
-  };
-
   return (
     <>
       <MetaInfoContainer>
-        <ProfileImg onClick={() => handelClick(author)} src={author.image} alt="profile" />
+        <Link to={{ pathname: '/user', state: { author } }}>
+          <ProfileImg src={author.image} alt="profile" />
+        </Link>
         <NameAndDateContainer>
-          <Username onClick={() => handelClick(author)}>{author.username}</Username>
+          <Username to={{ pathname: '/user', state: { author } }}>{author.username}</Username>
           <PublishDate>{printDate}</PublishDate>
         </NameAndDateContainer>
       </MetaInfoContainer>

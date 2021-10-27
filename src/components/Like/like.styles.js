@@ -2,8 +2,9 @@ import { ReactComponent as LikeLogo } from 'assets/Icons/likeLogoSolid.svg';
 import styled from 'styled-components';
 import { colors } from 'styles/colors-and-breaking-points';
 
-export const LikeBox = styled.div`
+export const LikeBox = styled.button`
   align-self: center;
+  background-color: transparent;
   border: 0.125rem solid ${colors.fern};
   border-radius: 0.3125rem;
   color: ${colors.fern};
@@ -21,6 +22,7 @@ export const LikeBox = styled.div`
   }
 
   & span {
+    font-size: 1rem;
     vertical-align: middle;
   }
 `;

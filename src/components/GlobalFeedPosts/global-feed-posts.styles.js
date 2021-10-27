@@ -1,10 +1,9 @@
-import styled from 'styled-components';
 import LikeComponent from 'components/Like/Like';
-import { colors, breakingPoints } from 'styles/colors-and-breaking-points';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { breakingPoints, colors } from 'styles/colors-and-breaking-points';
 
 export const Container = styled.div`
-  margin: 0 0 1.5625rem 0;
-  max-width: 34.375rem;
   padding: 0 0.625rem;
 
   @media (min-width: ${breakingPoints.mobile}) {
@@ -12,17 +11,12 @@ export const Container = styled.div`
   }
 
   @media (min-width: ${breakingPoints.tablets}) {
-    flex-basis: 75%;
     margin: 0 0 0 2.5rem;
-  }
-
-  @media (min-width: ${breakingPoints.smallScreen}) {
-    max-width: 56.25rem;
+    padding: 0 2rem 0 0.625rem;
   }
 
   @media (min-width: ${breakingPoints.largeScreen}) {
-    margin: 0 0 1.5625rem 6.25rem;
-    width: 62.5rem;
+    margin: 0 0 0 6.25rem;
   }
 `;
 
@@ -41,29 +35,35 @@ export const Like = styled(LikeComponent)`
   }
 `;
 
-export const PostContent = styled.div`
-  cursor: pointer;
-  margin: 0 0.625rem 0 0;
+export const PostContent = styled(Link)`
+  display: inline-block;
+  text-decoration: none;
 
-  & h1 {
+  & h2 {
+    color: ${colors.black};
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0.1875rem;
+    margin: 0.5rem 0;
   }
 
   & p {
     color: ${colors.dustyGrey};
     font-size: 1rem;
     font-weight: 300;
-    margin-bottom: 0.9375rem;
+    margin: 0.25rem 0;
   }
 `;
 
-export const ReadMore = styled.p`
+export const ReadMoreDiv = styled.div`
+  padding: 0.5rem 0 1.5rem;
+`;
+
+export const ReadMoreLink = styled(Link)`
   color: ${colors.dustyGrey};
   cursor: pointer;
   font-size: 0.75rem;
-  padding: 0.9375rem 0 0.9375rem;
+
+  text-decoration: none;
 
   &:hover {
     text-decoration: underline;

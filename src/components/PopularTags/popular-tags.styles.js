@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, breakingPoints } from 'styles/colors-and-breaking-points';
+import { breakingPoints, colors } from 'styles/colors-and-breaking-points';
 
 export const TagsContainer = styled.div`
   background-color: ${colors.concrete};
@@ -7,11 +7,6 @@ export const TagsContainer = styled.div`
   height: fit-content;
   margin: 0.625rem 0 2.5rem 0;
   padding: 0.3125rem 0.625rem 1.25rem;
-
-  @media (min-width: ${breakingPoints.mobile}) and (max-width: ${breakingPoints.tablets}) {
-    margin: 0 auto 2.5rem;
-    max-width: 34.375rem;
-  }
 
   @media (min-width: ${breakingPoints.tablets}) {
     flex-basis: 30%;
@@ -32,8 +27,9 @@ export const TagsBox = styled.p`
   flex-wrap: wrap;
 `;
 
-export const Tag = styled.span`
+export const Tag = styled.button`
   background-color: ${(props) => (props.isClicked ? colors.oBlack : colors.silver)};
+  border: none;
   border-radius: 0.9375rem;
   color: ${(props) => (props.isClicked ? colors.white : colors.black)};
   cursor: pointer;

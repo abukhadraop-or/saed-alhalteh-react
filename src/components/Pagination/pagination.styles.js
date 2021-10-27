@@ -5,18 +5,26 @@ export const PaginationList = styled.ul`
   list-style: none;
   text-align: center;
 
-  & :nth-child(${(props) => props.currentPage}) {
-    background-color: ${colors.fern};
-    color: ${colors.white};
+  & li:nth-child(${(props) => props.currentPage}) {
+    & button {
+      background-color: ${colors.fern};
+      color: ${colors.white};
+    }
   }
 `;
 
-export const PaginationLink = styled.li`
+export const PaginationItem = styled.li`
+  display: inline-block;
+`;
+
+export const PaginationLink = styled.button`
+  background-color: transparent;
   border: 0.0625rem solid ${colors.fern};
   border-radius: 0.1875rem;
   color: ${colors.fern};
   cursor: pointer;
   display: inline-block;
+  font-size: 1rem;
   margin: 0 0.3125rem 0 0;
   padding: 0.4375rem;
 `;

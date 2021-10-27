@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { colors, breakingPoints } from 'styles/colors-and-breaking-points';
+import { breakingPoints, colors } from 'styles/colors-and-breaking-points';
 
-export const NavLink = styled.ul`
+export const NavItemsContainer = styled.ul`
   border-bottom: 0.125rem solid ${colors.concrete};
   list-style-type: none;
   margin: 3.125rem 0 1.563rem 0;
@@ -10,8 +11,7 @@ export const NavLink = styled.ul`
   position: relative;
 
   @media (min-width: ${breakingPoints.mobile}) and (max-width: ${breakingPoints.tablets}) {
-    margin: 3.125rem auto 1.5625rem auto;
-    max-width: 37.5rem;
+    margin: 3.125rem 0 1.5625rem 0;
   }
 
   @media (min-width: ${breakingPoints.tablets}) {
@@ -24,6 +24,10 @@ export const NavLink = styled.ul`
 `;
 
 export const NavItem = styled.li`
+  display: inline-block;
+`;
+
+export const NavLink = styled(Link)`
   border-bottom: 0.125rem solid ${colors.fern};
   bottom: -0.125rem;
   color: ${colors.fern};
@@ -31,6 +35,7 @@ export const NavItem = styled.li`
   margin: 0;
   padding: 0.5rem 1rem;
   position: absolute;
+  text-decoration: none;
 `;
 
 export const TagsAndPostsContainer = styled.div`
@@ -46,7 +51,5 @@ export const TagsAndPostsContainer = styled.div`
 `;
 
 export const PostsDiv = styled.div`
-  @media (min-width: ${breakingPoints.tablets}) {
-    flex-basis: 56.25rem;
-  }
+  flex-grow: 1;
 `;
