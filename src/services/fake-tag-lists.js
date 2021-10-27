@@ -1,14 +1,14 @@
-const popularTags = {
+const tags = {
   tags: ['odd', 'even', 'only the first Article', '3/9/16/27'],
 };
 
 /**
- *  Gets available tags.
+ *  Gets tags.
  *
- * @return {String[]} Array of available tags.
+ * @return {string[]} tags.
  */
-const getPopularTags = () => {
-  return popularTags;
+const getTags = () => {
+  return tags;
 };
 
-export default getPopularTags;
+export default getTags;

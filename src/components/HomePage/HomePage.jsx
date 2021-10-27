@@ -1,6 +1,6 @@
 import Pagination from 'components/Pagination/Pagination';
-import PopularTags from 'components/PopularTags/PopularTags';
 import Posts from 'components/Posts/Posts';
+import Tags from 'components/Tags/Tags';
 import React, { useEffect, useState } from 'react';
 import fakeService from 'services/fake-posts-service';
 import {
@@ -15,43 +15,31 @@ import {
 } from './home-page.styles';
 
 /**
- * {Number} Maximum number of posts per page.
+ * @type {number} Maximum number of posts per page.
  */
 const pageSize = 5;
 
 /**
- * Component showing global-feed navigation-bar and posts.
+ * The home page of the application.
  *
- * @return {JSX.Element} Global feed component.
+ * @return {JSX.Element} HomePage component.
  */
-function GlobalFeed() {
+function HomePage() {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTags, setSelectedTags] = useState([]);
   const [postsCount, setPostsCount] = useState(0);
 
-  /**
-   * Gets the posts to be displayed on the page from the API.
-   */
   useEffect(() => {
-    const data = fakeService.getFilteredPosts(currentPage, pageSize, selectedTags);
+    const data = fakeService.getCurrentPagePosts(currentPage, pageSize, selectedTags);
     setPosts(data.posts);
     setPostsCount(data.count);
   }, [currentPage, selectedTags]);
 
   /**
-   * Updates the state variable "currentPage".
+   * Handle clicking on a tag.
    *
-   * @param {Number} page The number of the current page.
-   */
-  const handlePaginationClick = (page) => {
-    setCurrentPage(page);
-  };
-
-  /**
-   * Updates the state variable "selectedTags".
-   *
-   * @param {String} tag The tag which was clicked on.
+   * @param {string} tag Clicked tag.
    */
   const handleTagClick = (tag) => {
     const tagsArray = selectedTags;
@@ -63,7 +51,7 @@ function GlobalFeed() {
     }
 
     setSelectedTags([...tagsArray]);
-    handlePaginationClick(1);
+    setCurrentPage(1);
   };
 
   return (
@@ -78,7 +66,7 @@ function GlobalFeed() {
         </NavItem>
       </NavItemsContainer>
       <TagsAndPostsContainer>
-        <PopularTags onClick={(tag) => handleTagClick(tag)} selectedTags={selectedTags} />
+        <Tags onClick={(tag) => handleTagClick(tag)} selectedTags={selectedTags} />
         <PostsDiv>
           <Posts posts={posts} />
         </PostsDiv>
@@ -87,10 +75,10 @@ function GlobalFeed() {
         count={postsCount}
         pageSize={pageSize}
         currentPage={currentPage}
-        onClick={(page) => handlePaginationClick(page)}
+        onClick={(page) => setCurrentPage(page)}
       />
     </>
   );
 }
 
-export default GlobalFeed;
+export default HomePage;

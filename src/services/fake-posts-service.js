@@ -476,39 +476,39 @@ const posts = [
 ];
 
 /**
- * Filter posts based on the selected tags.
+ * Handles posts filtering.
  *
- * @param {Array} tags Array that contains all the tags that are selected.
+ * @param {string[]} tags The selected tags.
  *
- * @return {Object[]} Array of objects that contains posts details.
+ * @return {object[]} Posts.
  */
-const getFilteredPostsBasedOnTags = (tags) => {
+const getFilteredPosts = (tags) => {
   return tags.length === 0
     ? posts
     : posts.filter((post) => post.tagList.find((tag) => tags.includes(tag)));
 };
 
 /**
- * Slice Filtered posts based on the current page and page size.
+ * Handles posts segmentation.
  *
- * @param {Number} currentPage Number of the selected page.
- * @param {Number} pageSize Maximum number of posts per page.
- * @param {Array} tags  Array of selected tags.
+ * @param {number} currentPage The current page.
+ * @param {number} pageSize Maximum allowed number of posts per page.
+ * @param {string[]} tags The selected tags.
  *
- * @return {Object} Object that contains the filtered posts and the count of the total.
+ * @return {object} Posts for the curent page .
  */
-const getFilteredPosts = (currentPage, pageSize, tags) => {
-  const postsToBesliced = getFilteredPostsBasedOnTags(tags);
+const getCurrentPagePosts = (currentPage, pageSize, tags) => {
+  const postsToBesliced = getFilteredPosts(tags);
   const start = (currentPage - 1) * pageSize;
   const postsToBeDisplayed = postsToBesliced.slice(start, start + pageSize);
-  const filteredPosts = {
+  const currentPagePosts = {
     posts: postsToBeDisplayed,
     count: postsToBesliced.length,
   };
-  return filteredPosts;
+  return currentPagePosts;
 };
 
 export default {
-  getFilteredPostsBasedOnTags,
   getFilteredPosts,
+  getCurrentPagePosts,
 };

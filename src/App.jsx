@@ -9,7 +9,7 @@ import { Route, Switch } from 'react-router-dom';
 import GlobalStyle from 'styles/global-style';
 
 /**
- * Component shows the Nav-bar and Routes for our applications.
+ * The entry point for the application.
  *
  * @return {JSX.Element} App component.
  */

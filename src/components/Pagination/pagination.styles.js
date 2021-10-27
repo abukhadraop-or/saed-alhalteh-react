@@ -18,8 +18,8 @@ export const PaginationItem = styled.li`
   display: inline-block;
 `;
 
-export const PaginationLink = styled.button`
-  background-color: transparent;
+export const PaginationButton = styled.button`
+  background-color: ${colors.white};
   border: 0.0625rem solid ${colors.green};
   border-radius: 0.1875rem;
   color: ${colors.green};

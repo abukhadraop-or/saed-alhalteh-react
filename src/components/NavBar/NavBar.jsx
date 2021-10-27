@@ -11,12 +11,12 @@ import {
 } from './nav-bar.styles';
 
 /**
- * {String} The logo to be shown in the Nav-bar.
+ * @type {string} The logo.
  */
 const logo = 'Conduit';
 
 /**
- * {Object[]} that contains the Links title and url to be shown in the Nav-bar.
+ * @type {object<string, string>[]} Links label and url.
  */
 const items = [
   {
@@ -34,19 +34,12 @@ const items = [
 ];
 
 /**
- * Component showing the main navigation bar of the application.
+ * The main navigation bar of the application.
  *
- * @return {JSX.Element} Navigation bar component.
+ * @return {JSX.Element} NavBar component.
  */
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  /**
-   * Revert the status of the menu.
-   */
-  const handleMenuClick = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <>
@@ -61,7 +54,7 @@ function NavBar() {
             </NavItem>
           ))}
         </LinksList>
-        <MenuButton onClick={() => handleMenuClick()}>
+        <MenuButton onClick={() => setIsOpen(!isOpen)}>
           <MenuIcon />
         </MenuButton>
       </Container>
@@ -69,7 +62,7 @@ function NavBar() {
         <MenuBlock>
           {items.map((item) => (
             <NavItem>
-              <Link to={item.to} onClick={() => handleMenuClick()}>
+              <Link to={item.to} onClick={() => setIsOpen(!isOpen)}>
                 {item.label}
               </Link>
             </NavItem>

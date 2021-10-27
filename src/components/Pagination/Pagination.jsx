@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { PaginationItem, PaginationLink, PaginationList } from './pagination.styles';
+import { PaginationButton, PaginationItem, PaginationList } from './pagination.styles';
 
 /**
- * Component that displays the pages number based on the number of available posts.
+ * Pagination.
  *
  * @param {Object} props The props object.
- * @param {number} props.count Array of objects, which contains the posts.
- * @param {Number} props.pageSize Maximum number of posts that are allowed per page.
- * @param {function} props.onClick Functions to set the current page.
+ * @param {number} props.count  Posts count.
+ * @param {number} props.pageSize Maximum allowed number of posts per page.
+ * @param {Function} props.onClick Handles clicks on pagination.
  * @param {Number} props.currentPage The current page.
  *
  * @return {JSX.Element} Pagination component.
@@ -18,6 +18,7 @@ function Pagination({ count, pageSize, onClick, currentPage }) {
   pagesCount = count % pageSize === 0 ? pagesCount - 1 : pagesCount;
 
   const pagesArray = [];
+
   for (let i = 1; i <= pagesCount; i += 1) {
     pagesArray.push(i);
   }
@@ -26,9 +27,9 @@ function Pagination({ count, pageSize, onClick, currentPage }) {
     <PaginationList currentPage={currentPage}>
       {pagesArray.map((page) => (
         <PaginationItem>
-          <PaginationLink key={page} onClick={() => onClick(page)}>
+          <PaginationButton key={page} onClick={() => onClick(page)}>
             {page}
-          </PaginationLink>
+          </PaginationButton>
         </PaginationItem>
       ))}
     </PaginationList>
@@ -41,4 +42,5 @@ Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,
   count: PropTypes.number.isRequired,
 };
+
 export default Pagination;

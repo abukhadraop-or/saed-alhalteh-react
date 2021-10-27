@@ -23,7 +23,7 @@ export const Title = styled.h2`
   font-size: 1.25rem;
 `;
 
-export const TagsBox = styled.p`
+export const TagsBox = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;

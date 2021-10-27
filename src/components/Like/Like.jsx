@@ -3,10 +3,10 @@ import React from 'react';
 import { Like, LikeBox } from './like.styles';
 
 /**
- * Component showing number of likes for this post.
+ * Like button and likes count for the post.
  *
- * @param {Object} props The props object.
- * @param {Number} props.count Number of likes on the current item.
+ * @param {object} props The props object.
+ * @param {number} props.count Number of likes on the post.
  *
  * @return {JSX.Element} Like component.
  */

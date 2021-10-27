@@ -4,7 +4,7 @@ import colors from 'styles/colors';
 
 export const LikeBox = styled.button`
   align-self: center;
-  background-color: transparent;
+  background-color: ${colors.white};
   border: 0.125rem solid ${colors.green};
   border-radius: 0.3125rem;
   color: ${colors.green};

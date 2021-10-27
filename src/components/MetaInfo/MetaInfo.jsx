@@ -10,11 +10,11 @@ import {
 } from './meta-info.styles';
 
 /**
- * Component that shows the post's author username and image, and the date when the posts was created.
+ * Meta information about the post.
  *
- * @param {Object} props The props object.
- * @param {Object} props.author Object contains details about the post's author.
- * @param {String} props.createdAt The date when the post created.
+ * @param {object} props The props object.
+ * @param {object} props.author  Post's author information.
+ * @param {string} props.createdAt The date when the post was created.
  *
  * @return {JSX.Element} MetaInfo component.
  */

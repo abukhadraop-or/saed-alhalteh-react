@@ -11,12 +11,12 @@ import {
 } from './posts.styles';
 
 /**
- * Component showing posts details to be displayed on the Global feed section.
+ * Posts details.
  *
- * @param {Object} props The props object.
- * @param {Object[]} props.posts Array of objects that contains details about each post.
+ * @param {object} props The props object.
+ * @param {object[]} props.posts Posts.
  *
- * @return {JSX.Element} Global feed Posts.
+ * @return {JSX.Element} Posts component.
  */
 function Posts({ posts }) {
   return posts.length === 0 ? (
