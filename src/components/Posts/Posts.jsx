@@ -8,7 +8,7 @@ import {
   ReadMoreDiv,
   ReadMoreLink,
   UserDataContainer,
-} from './global-feed-posts.styles';
+} from './posts.styles';
 
 /**
  * Component showing posts details to be displayed on the Global feed section.
@@ -18,7 +18,7 @@ import {
  *
  * @return {JSX.Element} Global feed Posts.
  */
-function GlobalFeedPosts({ posts }) {
+function Posts({ posts }) {
   return posts.length === 0 ? (
     <Container>
       <p> No articles are here... yet. </p>
@@ -46,7 +46,7 @@ function GlobalFeedPosts({ posts }) {
   );
 }
 
-GlobalFeedPosts.propTypes = {
+Posts.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
@@ -63,4 +63,4 @@ GlobalFeedPosts.propTypes = {
   ).isRequired,
 };
 
-export default GlobalFeedPosts;
+export default Posts;

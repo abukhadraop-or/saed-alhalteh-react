@@ -1,15 +1,18 @@
-import GlobalFeedPosts from 'components/GlobalFeedPosts/GlobalFeedPosts';
 import Pagination from 'components/Pagination/Pagination';
 import PopularTags from 'components/PopularTags/PopularTags';
+import Posts from 'components/Posts/Posts';
 import React, { useEffect, useState } from 'react';
 import fakeService from 'services/fake-posts-service';
 import {
+  BannerContainer,
+  BannerDescription,
+  BannerTitle,
   NavItem,
   NavItemsContainer,
   NavLink,
   PostsDiv,
   TagsAndPostsContainer,
-} from './global-feed.styles';
+} from './home-page.styles';
 
 /**
  * {Number} Maximum number of posts per page.
@@ -65,6 +68,10 @@ function GlobalFeed() {
 
   return (
     <>
+      <BannerContainer>
+        <BannerTitle> Conduit </BannerTitle>
+        <BannerDescription> A place to share your knowledge </BannerDescription>
+      </BannerContainer>
       <NavItemsContainer>
         <NavItem>
           <NavLink to="/"> Global Feed</NavLink>
@@ -73,7 +80,7 @@ function GlobalFeed() {
       <TagsAndPostsContainer>
         <PopularTags onClick={(tag) => handleTagClick(tag)} selectedTags={selectedTags} />
         <PostsDiv>
-          <GlobalFeedPosts posts={posts} />
+          <Posts posts={posts} />
         </PostsDiv>
       </TagsAndPostsContainer>
       <Pagination

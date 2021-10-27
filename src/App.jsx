@@ -1,6 +1,6 @@
-import Conduit from 'components/ConduitHomePage/Conduit';
 import SignInForm from 'components/Forms/SignInForm';
 import SignUpForm from 'components/Forms/SignUpForm';
+import HomePage from 'components/HomePage/HomePage';
 import NavBar from 'components/NavBar/NavBar';
 import Post from 'components/Post/Post';
 import UserProfile from 'components/UserProfile/UserProfile';
@@ -23,7 +23,7 @@ function App() {
         <Route path="/posts/" component={Post} />
         <Route path="/signUp" component={SignUpForm} />
         <Route path="/signIn" component={SignInForm} />
-        <Route path="/" exact component={Conduit} />
+        <Route path="/" exact component={HomePage} />
       </Switch>
     </>
   );
