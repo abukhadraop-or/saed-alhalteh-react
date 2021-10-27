@@ -36,7 +36,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon 3',
     title: 'How to train your dragon 3',
     description: 'Ever wonder how?',
     body: '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -54,7 +54,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-4',
     title: 'How to train your dragon 4',
     description: 'So toothless',
     body: '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -71,7 +71,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon 5',
     title: 'How to train your dragon 5',
     description: 'Ever wonder how?',
     body: '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -89,7 +89,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-6',
     title: 'How to train your dragon  6',
     description: 'So toothless',
     body: '6 It a dragon',
@@ -106,7 +106,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon7',
     title: 'How to train your dragon 7',
     description: 'Ever wonder how?',
     body: '7 It takes a Jacobian',
@@ -124,7 +124,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-8',
     title: 'How to train your dragon 8',
     description: 'So toothless',
     body: '8 It a dragon',
@@ -141,7 +141,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon9',
     title: 'How to train your dragon 9',
     description: 'Ever wonder how?',
     body: '9 It takes a Jacobian',
@@ -159,7 +159,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-10',
     title: 'How to train your dragon 10',
     description: 'So toothless',
     body: '10 It a dragon',
@@ -176,7 +176,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon11',
     title: 'How to train your dragon 11',
     description: 'Ever wonder how?',
     body: '11 It takes a Jacobian',
@@ -194,7 +194,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-12',
     title: 'How to train your dragon 12',
     description: 'So toothless',
     body: '12 It a dragon',
@@ -211,7 +211,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon13',
     title: 'How to train your dragon 13',
     description: 'Ever wonder how?',
     body: '13 It takes a Jacobian',
@@ -229,7 +229,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-14',
     title: 'How to train your dragon 14',
     description: 'So toothless',
     body: '14 It a dragon',
@@ -246,7 +246,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon15',
     title: 'How to train your dragon 15',
     description: 'Ever wonder how?',
     body: '15 It takes a Jacobian',
@@ -264,7 +264,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-16',
     title: 'How to train your dragon 16',
     description: 'So toothless',
     body: '16 It a dragon',
@@ -281,7 +281,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon17',
     title: 'How to train your dragon 17',
     description: 'Ever wonder how?',
     body: '17 It takes a Jacobian',
@@ -299,7 +299,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon18',
     title: 'How to train your dragon 18',
     description: 'So toothless',
     body: '18 It a dragon',
@@ -316,7 +316,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon19',
     title: 'How to train your dragon 19',
     description: 'Ever wonder how?',
     body: '19 It takes a Jacobian',
@@ -334,7 +334,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-20',
     title: 'How to train your dragon 20',
     description: 'So toothless',
     body: '20 It a dragon',
@@ -351,7 +351,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon21',
     title: 'How to train your dragon 21',
     description: 'Ever wonder how?',
     body: '21 It takes a Jacobian',
@@ -369,7 +369,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-22',
     title: 'How to train your dragon 22',
     description: 'So toothless',
     body: '22 It a dragon',
@@ -386,7 +386,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon23',
     title: 'How to train your dragon 23',
     description: 'Ever wonder how?',
     body: '23 It takes a Jacobian',
@@ -404,7 +404,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-24',
     title: 'How to train your dragon 24',
     description: 'So toothless',
     body: '24 It a dragon',
@@ -421,7 +421,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon25',
     title: 'How to train your dragon 25',
     description: 'Ever wonder how?',
     body: '25 It takes a Jacobian',
@@ -439,7 +439,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon-2',
+    slug: 'how-to-train-your-dragon-26',
     title: 'How to train your dragon 26',
     description: 'So toothless',
     body: '26 It a dragon',
@@ -456,7 +456,7 @@ const posts = [
     },
   },
   {
-    slug: 'how-to-train-your-dragon',
+    slug: 'how-to-train-your-dragon27',
     title: 'How to train your dragon 27',
     description: 'Ever wonder how?',
     body: '27 It takes a Jacobian',

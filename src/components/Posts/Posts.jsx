@@ -25,23 +25,21 @@ function Posts({ posts }) {
     </Container>
   ) : (
     posts.map((post) => (
-      <>
-        <Container>
-          <UserDataContainer>
-            <MetaInfo author={post.author} createdAt={post.createdAt} />
-            <Like count={post.favoritesCount} />
-          </UserDataContainer>
-          <PostContent to={{ pathname: '/posts', state: { detail: post } }}>
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
-          </PostContent>
-          <ReadMoreDiv>
-            <ReadMoreLink to={{ pathname: '/posts', state: { detail: post } }}>
-              Read more...
-            </ReadMoreLink>
-          </ReadMoreDiv>
-        </Container>
-      </>
+      <Container key={post.slug}>
+        <UserDataContainer>
+          <MetaInfo author={post.author} createdAt={post.createdAt} />
+          <Like count={post.favoritesCount} />
+        </UserDataContainer>
+        <PostContent to={{ pathname: '/posts', state: { detail: post } }}>
+          <h2>{post.title}</h2>
+          <p>{post.description}</p>
+        </PostContent>
+        <ReadMoreDiv>
+          <ReadMoreLink to={{ pathname: '/posts', state: { detail: post } }}>
+            Read more...
+          </ReadMoreLink>
+        </ReadMoreDiv>
+      </Container>
     ))
   );
 }

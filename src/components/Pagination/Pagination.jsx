@@ -26,10 +26,8 @@ function Pagination({ count, pageSize, onClick, currentPage }) {
   return pagesCount === 1 ? null : (
     <PaginationList currentPage={currentPage}>
       {pagesArray.map((page) => (
-        <PaginationItem>
-          <PaginationButton key={page} onClick={() => onClick(page)}>
-            {page}
-          </PaginationButton>
+        <PaginationItem key={page}>
+          <PaginationButton onClick={() => onClick(page)}>{page}</PaginationButton>
         </PaginationItem>
       ))}
     </PaginationList>

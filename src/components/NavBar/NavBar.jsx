@@ -61,7 +61,7 @@ function NavBar() {
       {isOpen && (
         <MenuBlock>
           {items.map((item) => (
-            <NavItem>
+            <NavItem key={item.label}>
               <Link to={item.to} onClick={() => setIsOpen(!isOpen)}>
                 {item.label}
               </Link>
