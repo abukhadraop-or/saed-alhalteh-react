@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> tests matches the snapshot 1`] = `
+<BrowserRouter>
+  <Memo(l) />
+  <NavBar />
+  <Switch>
+    <Route
+      component={[Function]}
+      path="/user"
+    />
+    <Route
+      component={[Function]}
+      path="/posts/"
+    />
+    <Route
+      component={[Function]}
+      path="/signUp"
+    />
+    <Route
+      component={[Function]}
+      path="/signIn"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+  </Switch>
+</BrowserRouter>
+`;

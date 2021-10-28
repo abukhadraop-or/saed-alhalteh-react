@@ -2,7 +2,7 @@ import Pagination from 'components/Pagination/Pagination';
 import Posts from 'components/Posts/Posts';
 import Tags from 'components/Tags/Tags';
 import React, { useEffect, useState } from 'react';
-import fakeService from 'services/fake-posts-service';
+import getCurrentPagePosts from 'services/fake-posts-service';
 import {
   BannerContainer,
   BannerDescription,
@@ -31,7 +31,7 @@ function HomePage() {
   const [postsCount, setPostsCount] = useState(0);
 
   useEffect(() => {
-    const data = fakeService.getCurrentPagePosts(currentPage, pageSize, selectedTags);
+    const data = getCurrentPagePosts(currentPage, pageSize, selectedTags);
     setPosts(data.posts);
     setPostsCount(data.count);
   }, [currentPage, selectedTags]);

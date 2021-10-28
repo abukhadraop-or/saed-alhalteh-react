@@ -508,7 +508,4 @@ const getCurrentPagePosts = (currentPage, pageSize, tags) => {
   return currentPagePosts;
 };
 
-export default {
-  getFilteredPosts,
-  getCurrentPagePosts,
-};
+export default getCurrentPagePosts;

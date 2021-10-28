@@ -44,6 +44,10 @@ function Posts({ posts }) {
   );
 }
 
+Posts.defaultProps = {
+  posts: [],
+};
+
 Posts.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
@@ -58,7 +62,7 @@ Posts.propTypes = {
         following: PropTypes.bool,
       }),
     })
-  ).isRequired,
+  ),
 };
 
 export default Posts;

@@ -5,9 +5,8 @@ import NavBar from 'components/NavBar/NavBar';
 import Post from 'components/Post/Post';
 import UserProfile from 'components/UserProfile/UserProfile';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalStyle from 'styles/global-style';
-
 /**
  * The entry point for the application.
  *
@@ -15,7 +14,7 @@ import GlobalStyle from 'styles/global-style';
  */
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle />
       <NavBar />
       <Switch>
@@ -25,7 +24,7 @@ function App() {
         <Route path="/signIn" component={SignInForm} />
         <Route path="/" exact component={HomePage} />
       </Switch>
-    </>
+    </BrowserRouter>
   );
 }
 

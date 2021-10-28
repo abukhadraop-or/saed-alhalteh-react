@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> tests matches the snapshot 1`] = `
+<Fragment>
+  <styled.div>
+    <styled.h1>
+       Conduit 
+    </styled.h1>
+    <styled.div>
+       A place to share your knowledge 
+    </styled.div>
+  </styled.div>
+  <styled.ul>
+    <styled.li>
+      <Styled(Link)
+        to="/"
+      >
+         Global Feed
+      </Styled(Link)>
+    </styled.li>
+  </styled.ul>
+  <styled.div>
+    <Tags
+      onClick={[Function]}
+      selectedTags={Array []}
+    />
+    <styled.div>
+      <Posts
+        posts={Array []}
+      />
+    </styled.div>
+  </styled.div>
+  <Pagination
+    count={0}
+    currentPage={1}
+    onClick={[Function]}
+    pageSize={5}
+  />
+</Fragment>
+`;
