@@ -19,8 +19,12 @@ function LikeComponent({ count }) {
   );
 }
 
+LikeComponent.defaultProps = {
+  count: 0,
+};
+
 LikeComponent.propTypes = {
-  count: PropTypes.number.isRequired,
+  count: PropTypes.number,
 };
 
 export default LikeComponent;

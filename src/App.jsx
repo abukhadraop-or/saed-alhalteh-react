@@ -1,9 +1,9 @@
-import SignInForm from 'components/Forms/SignInForm';
-import SignUpForm from 'components/Forms/SignUpForm';
 import HomePage from 'components/HomePage';
 import NavBar from 'components/NavBar';
 import NotFound from 'components/NotFound';
 import Post from 'components/Post';
+import SignInForm from 'components/SignInForm';
+import SignUpForm from 'components/SignUpForm';
 import UserProfile from 'components/UserProfile';
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
