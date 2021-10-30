@@ -1,6 +1,6 @@
-import Pagination from 'components/Pagination/Pagination';
-import Posts from 'components/Posts/Posts';
-import Tags from 'components/Tags/Tags';
+import Pagination from 'components/Pagination';
+import Posts from 'components/Posts';
+import Tags from 'components/Tags';
 import React, { useEffect, useState } from 'react';
 import getCurrentPagePosts from 'services/fake-posts-service';
 import {

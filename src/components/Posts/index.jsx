@@ -1,4 +1,4 @@
-import MetaInfo from 'components/MetaInfo/MetaInfo';
+import MetaInfo from 'components/MetaInfo';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {

@@ -1,15 +1,15 @@
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import Pagination from 'components/Pagination/Pagination';
+import Pagination from 'components/Pagination';
 import { PaginationButton } from 'components/Pagination/pagination.styles';
-import Posts from 'components/Posts/Posts';
-import Tags from 'components/Tags/Tags';
+import Posts from 'components/Posts';
+import Tags from 'components/Tags';
 import { Tag } from 'components/Tags/tags.styles';
 import Enzyme, { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import getCurrentPagePosts from 'services/fake-posts-service';
-import HomePage from './HomePage';
+import HomePage from '.';
 
 Enzyme.configure({ adapter: new Adapter() });
 

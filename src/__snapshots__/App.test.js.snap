@@ -23,8 +23,15 @@ exports[`<App /> tests matches the snapshot 1`] = `
     />
     <Route
       component={[Function]}
+      path="/not-found"
+    />
+    <Route
+      component={[Function]}
       exact={true}
       path="/"
+    />
+    <Redirect
+      to="/not-found"
     />
   </Switch>
 </BrowserRouter>

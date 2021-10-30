@@ -2,8 +2,8 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import Enzyme, { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
+import NavBar from '.';
 import { MenuBlock, MenuButton } from './nav-bar.styles';
-import NavBar from './NavBar';
 
 Enzyme.configure({ adapter: new Adapter() });
 

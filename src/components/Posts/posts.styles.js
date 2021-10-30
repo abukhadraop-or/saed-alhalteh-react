@@ -1,4 +1,4 @@
-import LikeComponent from 'components/Like/Like';
+import LikeComponent from 'components/Like';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import breakingPoints from 'styles/breaking-points';
