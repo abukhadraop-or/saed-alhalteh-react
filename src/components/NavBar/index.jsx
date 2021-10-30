@@ -33,6 +33,8 @@ const items = [
   },
 ];
 
+const menuBlock = React.createRef();
+
 /**
  * The main navigation bar of the application.
  *
@@ -40,6 +42,19 @@ const items = [
  */
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  /**
+   * Handle menuButton on blur event.
+   *
+   * @param {object} event On blur event.
+   */
+  const handleBlur = (event) => {
+    const target = event.relatedTarget;
+
+    if (!target || target.parentElement.parentElement !== menuBlock.current) {
+      setIsOpen(false);
+    }
+  };
 
   return (
     <>
@@ -54,12 +69,12 @@ function NavBar() {
             </NavItem>
           ))}
         </LinksList>
-        <MenuButton onClick={() => setIsOpen(!isOpen)}>
+        <MenuButton onClick={() => setIsOpen(!isOpen)} onBlur={(event) => handleBlur(event)}>
           <MenuIcon />
         </MenuButton>
       </Container>
       {isOpen && (
-        <MenuBlock>
+        <MenuBlock ref={menuBlock}>
           {items.map((item) => (
             <NavItem key={item.label}>
               <Link to={item.to} onClick={() => setIsOpen(!isOpen)}>
