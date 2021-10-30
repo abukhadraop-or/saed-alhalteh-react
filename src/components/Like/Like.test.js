@@ -6,9 +6,13 @@ import Like from '.';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+const likeProps = {
+  count: 0,
+};
+
 describe('<Like /> tests', () => {
   it('matches the snapshot', () => {
-    const wrapper = shallow(<Like />);
+    const wrapper = shallow(<Like count={likeProps.count} />);
 
     expect(toJson(wrapper)).toMatchSnapshot();
   });
