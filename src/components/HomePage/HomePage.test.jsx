@@ -1,17 +1,14 @@
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import Pagination from 'components/Pagination';
 import { PaginationButton } from 'components/Pagination/pagination.styles';
 import Posts from 'components/Posts';
 import Tags from 'components/Tags';
 import { Tag } from 'components/Tags/tags.styles';
-import Enzyme, { mount, shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import getCurrentPagePosts from 'services/fake-posts-service';
 import HomePage from '.';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 jest.mock('services/fake-posts-service');
 

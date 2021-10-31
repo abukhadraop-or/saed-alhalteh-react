@@ -1,21 +1,8 @@
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import Enzyme, { shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import Pagination from '.';
 import { PaginationButton } from './pagination.styles';
-
-Enzyme.configure({ adapter: new Adapter() });
-
-// post
-// posts
-// tags
-// userProfile
-
-// check zeqlam and abu khagra notes
-
-// ask about the naming convention of unit test files (should I write them as kebab-case)
-// check the variables names in unit test files ( espically inside element object ) I think the first letter should be small.
 
 describe('<Pagination /> tests', () => {
   it('matches the snapshot', () => {

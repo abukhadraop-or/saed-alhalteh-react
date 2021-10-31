@@ -1,12 +1,9 @@
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-import Enzyme, { mount, shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
 import getTags from 'services/fake-tag-lists';
 import Tags from '.';
 import { Tag } from './tags.styles';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 jest.mock('services/fake-tag-lists');
 
