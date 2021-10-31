@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MetaInfo/> tests matches the snapshot 1`] = `
+<Fragment>
+  <styled.div>
+    <Link
+      to={
+        Object {
+          "pathname": "/user",
+          "state": Object {
+            "author": Object {
+              "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Crystal_personal.svg/1024px-Crystal_personal.svg.png",
+              "username": "Jack",
+            },
+          },
+        }
+      }
+    >
+      <styled.img
+        alt="profile"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Crystal_personal.svg/1024px-Crystal_personal.svg.png"
+      />
+    </Link>
+    <styled.div>
+      <Styled(Link)
+        to={
+          Object {
+            "pathname": "/user",
+            "state": Object {
+              "author": Object {
+                "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Crystal_personal.svg/1024px-Crystal_personal.svg.png",
+                "username": "Jack",
+              },
+            },
+          }
+        }
+      >
+        Jack
+      </Styled(Link)>
+      <styled.div>
+        Thu Feb 18 2016
+      </styled.div>
+    </styled.div>
+  </styled.div>
+</Fragment>
+`;

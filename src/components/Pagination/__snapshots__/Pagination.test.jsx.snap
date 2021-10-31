@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> tests matches the snapshot 1`] = `
+<styled.ul
+  currentPage={1}
+>
+  <styled.li
+    key="1"
+  >
+    <styled.button
+      onClick={[Function]}
+    >
+      1
+    </styled.button>
+  </styled.li>
+  <styled.li
+    key="2"
+  >
+    <styled.button
+      onClick={[Function]}
+    >
+      2
+    </styled.button>
+  </styled.li>
+  <styled.li
+    key="3"
+  >
+    <styled.button
+      onClick={[Function]}
+    >
+      3
+    </styled.button>
+  </styled.li>
+  <styled.li
+    key="4"
+  >
+    <styled.button
+      onClick={[Function]}
+    >
+      4
+    </styled.button>
+  </styled.li>
+  <styled.li
+    key="5"
+  >
+    <styled.button
+      onClick={[Function]}
+    >
+      5
+    </styled.button>
+  </styled.li>
+</styled.ul>
+`;

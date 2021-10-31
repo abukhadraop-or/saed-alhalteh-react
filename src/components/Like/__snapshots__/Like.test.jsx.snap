@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Like /> tests matches the snapshot 1`] = `
+<styled.button>
+  <Styled(Component) />
+  <span>
+    0
+  </span>
+</styled.button>
+`;

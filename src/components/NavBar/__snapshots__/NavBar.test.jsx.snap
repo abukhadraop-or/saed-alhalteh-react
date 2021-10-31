@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> tests matches the snapshot 1`] = `
+<Fragment>
+  <styled.div>
+    <styled.div>
+      <Link
+        to="/"
+      >
+        Conduit
+      </Link>
+    </styled.div>
+    <styled.ul>
+      <styled.li
+        key="Home"
+      >
+        <Link
+          to="/"
+        >
+          Home
+        </Link>
+      </styled.li>
+      <styled.li
+        key="Sign In"
+      >
+        <Link
+          to="/signIn"
+        >
+          Sign In
+        </Link>
+      </styled.li>
+      <styled.li
+        key="Sign Up"
+      >
+        <Link
+          to="/signUp"
+        >
+          Sign Up
+        </Link>
+      </styled.li>
+    </styled.ul>
+    <styled.button
+      onBlur={[Function]}
+      onClick={[Function]}
+    >
+      <Styled(Component) />
+    </styled.button>
+  </styled.div>
+</Fragment>
+`;
