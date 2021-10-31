@@ -37,6 +37,16 @@ const mockData = {
   count: 1,
 };
 
+let mountWrapper;
+
+const elements = {
+  pagination: () => mountWrapper.find(Pagination),
+  tag: () => mountWrapper.find(Tag),
+  tags: () => mountWrapper.find(Tags),
+  posts: () => mountWrapper.find(Posts),
+  paginationButton: () => mountWrapper.find(PaginationButton),
+};
+
 describe('<HomePage /> tests', () => {
   it('matches the snapshot', () => {
     const wrapper = shallow(<HomePage />);
@@ -46,13 +56,13 @@ describe('<HomePage /> tests', () => {
 
   it('passes posts and count correctly to Posts and Pagination components ', () => {
     getCurrentPagePosts.mockReturnValue(mockData);
-    const mountWrapper = mount(
+    mountWrapper = mount(
       <BrowserRouter>
         <HomePage />
       </BrowserRouter>
     );
-    const { posts } = mountWrapper.find(Posts).props();
-    const { count } = mountWrapper.find(Pagination).props();
+    const { posts } = elements.posts().props();
+    const { count } = elements.pagination().props();
 
     expect(posts).toBe(mockData.posts);
     expect(count).toBe(1);
@@ -61,24 +71,24 @@ describe('<HomePage /> tests', () => {
   describe('#handleTagClick', () => {
     it('sets selectedTags and current page correctly', () => {
       getCurrentPagePosts.mockReturnValue(mockData);
-      const mountWrapper = mount(
+      mountWrapper = mount(
         <BrowserRouter>
           <HomePage />
         </BrowserRouter>
       );
 
-      mountWrapper.find(Tag).at(1).simulate('click');
+      elements.tag().at(1).simulate('click');
 
-      let { selectedTags } = mountWrapper.find(Tags).props();
-      let { currentPage } = mountWrapper.find(Pagination).props();
+      let { selectedTags } = elements.tags().props();
+      let { currentPage } = elements.pagination().props();
 
       expect(selectedTags).toEqual(['even']);
       expect(currentPage).toEqual(1);
 
-      mountWrapper.find(Tag).at(1).simulate('click');
+      elements.tag().at(1).simulate('click');
 
-      ({ selectedTags } = mountWrapper.find(Tags).props());
-      ({ currentPage } = mountWrapper.find(Pagination).props());
+      ({ selectedTags } = elements.tags().props());
+      ({ currentPage } = elements.pagination().props());
 
       expect(selectedTags).not.toEqual(['even']);
       expect(currentPage).toEqual(1);
@@ -112,15 +122,15 @@ describe('<HomePage /> tests', () => {
         count: 12,
       };
       getCurrentPagePosts.mockReturnValue(mockData2);
-      const mountWrapper = mount(
+      mountWrapper = mount(
         <BrowserRouter>
           <HomePage />
         </BrowserRouter>
       );
 
-      mountWrapper.find(PaginationButton).at(1).simulate('click');
+      elements.paginationButton().at(1).simulate('click');
 
-      const { currentPage } = mountWrapper.find(Pagination).props();
+      const { currentPage } = elements.pagination().props();
 
       expect(currentPage).toEqual(2);
     });

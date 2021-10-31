@@ -4,13 +4,13 @@ import React from 'react';
 import NavBar from '.';
 import { MenuBlock, MenuButton } from './nav-bar.styles';
 
-describe('<NavBar /> tests', () => {
-  let wrapper;
-  const elements = {
-    MenuButton: () => wrapper.find(MenuButton),
-    MenuBlock: () => wrapper.find(MenuBlock),
-  };
+let wrapper;
+const elements = {
+  menuButton: () => wrapper.find(MenuButton),
+  menuBlock: () => wrapper.find(MenuBlock),
+};
 
+describe('<NavBar /> tests', () => {
   beforeEach(() => {
     wrapper = shallow(<NavBar />);
   });
@@ -20,28 +20,28 @@ describe('<NavBar /> tests', () => {
   });
 
   it('toggles the displays of the MenuBlock when MenuButton is clicked', () => {
-    elements.MenuButton().simulate('click');
+    elements.menuButton().simulate('click');
 
-    expect(elements.MenuBlock().length).toBe(1);
+    expect(elements.menuBlock().length).toBe(1);
 
-    elements.MenuButton().simulate('click');
+    elements.menuButton().simulate('click');
 
-    expect(elements.MenuBlock().length).toBe(0);
+    expect(elements.menuBlock().length).toBe(0);
   });
 
   it('hides the MenuBlock when a link is clicked', () => {
-    elements.MenuButton().simulate('click');
-    elements.MenuBlock().find('Link').at(0).simulate('click');
+    elements.menuButton().simulate('click');
+    elements.menuBlock().find('Link').at(0).simulate('click');
 
-    expect(elements.MenuBlock().length).toBe(0);
+    expect(elements.menuBlock().length).toBe(0);
   });
 
   describe('#handleBlur', () => {
     it('hides menuBlock when clicking on null', () => {
-      elements.MenuButton().simulate('click');
-      elements.MenuButton().simulate('blur');
+      elements.menuButton().simulate('click');
+      elements.menuButton().simulate('blur');
 
-      expect(elements.MenuBlock().length).toBe(0);
+      expect(elements.menuBlock().length).toBe(0);
     });
 
     it('hides menuBlock when clicking on different element', () => {
@@ -50,10 +50,10 @@ describe('<NavBar /> tests', () => {
         _reactName: 'onBlur',
       };
 
-      elements.MenuButton().simulate('click');
-      elements.MenuButton().simulate('blur', event);
+      elements.menuButton().simulate('click');
+      elements.menuButton().simulate('blur', event);
 
-      expect(elements.MenuBlock().length).toBe(0);
+      expect(elements.menuBlock().length).toBe(0);
     });
   });
 });

@@ -10,8 +10,10 @@ jest.mock('services/fake-tag-lists');
 const mockData = {
   tags: ['odd', 'even', 'only the first Article', '3/9/16/27'],
 };
-
 const mockOnClick = jest.fn();
+
+let mountWrapper;
+const tag = () => mountWrapper.find(Tag);
 
 describe('<Tags /> tests', () => {
   it('matches the snapshot', () => {
@@ -22,24 +24,24 @@ describe('<Tags /> tests', () => {
 
   it('sets the tags in the state after fetching them from the API', () => {
     getTags.mockReturnValue(mockData);
-    const mountWrapper = mount(<Tags selectedTags={[]} onClick={mockOnClick} />);
+    mountWrapper = mount(<Tags selectedTags={[]} onClick={mockOnClick} />);
 
-    expect(mountWrapper.find(Tag).length).toBe(4);
+    expect(tag().length).toBe(4);
   });
 
   it('calls onClick function when clicked', () => {
     getTags.mockReturnValue(mockData);
-    const mountWrapper = mount(<Tags selectedTags={[]} onClick={mockOnClick} />);
+    mountWrapper = mount(<Tags selectedTags={[]} onClick={mockOnClick} />);
 
-    mountWrapper.find(Tag).at(0).simulate('click');
+    tag().at(0).simulate('click');
 
     expect(mockOnClick).toHaveBeenCalledWith('odd');
   });
 
   it('assigns isClicked props correctly', () => {
     getTags.mockReturnValue(mockData);
-    const mountWrapper = mount(<Tags selectedTags={['odd']} onClick={mockOnClick} />);
-    const { isClicked } = mountWrapper.find(Tag).at(0).props();
+    mountWrapper = mount(<Tags selectedTags={['odd']} onClick={mockOnClick} />);
+    const { isClicked } = tag().at(0).props();
 
     expect(isClicked).toBeTruthy();
   });
