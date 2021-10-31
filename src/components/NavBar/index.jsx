@@ -49,7 +49,7 @@ function NavBar() {
    * @param {object} event On blur event.
    */
   const handleBlur = (event) => {
-    const target = event.relatedTarget;
+    const target = event && event.relatedTarget;
 
     if (!target || target.parentElement.parentElement !== menuBlock.current) {
       setIsOpen(false);

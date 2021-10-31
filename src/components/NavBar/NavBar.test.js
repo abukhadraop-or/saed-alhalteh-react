@@ -38,4 +38,25 @@ describe('<NavBar /> tests', () => {
 
     expect(elements.MenuBlock().length).toBe(0);
   });
+
+  describe('#handleBlur', () => {
+    it('hides menuBlock when clicking on null', () => {
+      elements.MenuButton().simulate('click');
+      elements.MenuButton().simulate('blur');
+
+      expect(elements.MenuBlock().length).toBe(0);
+    });
+
+    it('hides menuBlock when clicking on different element', () => {
+      const event = {
+        relatedTarget: { parentElement: 'a' },
+        _reactName: 'onBlur',
+      };
+
+      elements.MenuButton().simulate('click');
+      elements.MenuButton().simulate('blur', event);
+
+      expect(elements.MenuBlock().length).toBe(0);
+    });
+  });
 });

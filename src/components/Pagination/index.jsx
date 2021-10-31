@@ -34,15 +34,11 @@ function Pagination({ count, pageSize, onClick, currentPage }) {
   );
 }
 
-Pagination.defaultProps = {
-  count: 0,
-};
-
 Pagination.propTypes = {
   pageSize: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
   currentPage: PropTypes.number.isRequired,
-  count: PropTypes.number,
+  count: PropTypes.number.isRequired,
 };
 
 export default Pagination;

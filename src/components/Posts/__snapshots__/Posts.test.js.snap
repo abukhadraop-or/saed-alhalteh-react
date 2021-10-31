@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Posts /> tests matches the snapshot when there is no posts 1`] = `
+<styled.div>
+  <p>
+     No articles are here... yet. 
+  </p>
+</styled.div>
+`;

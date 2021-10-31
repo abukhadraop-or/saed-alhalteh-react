@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Post /> tests matches the snapshot 1`] = `
+<h1>
+  Post details 
+</h1>
+`;

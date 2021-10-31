@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tags /> tests matches the snapshot 1`] = `
+<styled.div>
+  <styled.h2>
+     Popular Tags
+  </styled.h2>
+  <styled.div>
+    <b>
+       No Tags are available yet... 
+    </b>
+  </styled.div>
+</styled.div>
+`;
